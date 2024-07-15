@@ -28,3 +28,8 @@ web frontends (= browser-side web applications):
 easier:
 
 7. easier: Less complex, simpler, or more convenient compared to writing everything from scratch or using other less efficient methods.
+
+--> In traditional web pages , you request and HTML page that is returend by the server and then the next set of things are rendered and now if you go to another page another HTML page will be requested but if you use Javscript in the browser then simply you can change the content of the current page and the new extra request doesn't even need to be made which just makes this fast and look like a mobile app and that's what we are going to use a Vue.js framework for. 
+
+--> Which is also called <b>SPA</b> or Single Page Application where the server sends a single HTML file and there on wards Vue takes over the interactivity and the UI.
+
