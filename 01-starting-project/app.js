@@ -1,14 +1,14 @@
 /* ------------ Declarative Approach --------------- */
 
 Vue.createApp({
-    data(){
+    data() {
         return {
-            goals:[],
-            enteredValue:""
+            goals: [],
+            enteredValue: ""
         };
     },
     methods: {
-        addGoal(){
+        addGoal() {
             console.log("This is true")
             this.goals.push(this.enteredValue)
         }
