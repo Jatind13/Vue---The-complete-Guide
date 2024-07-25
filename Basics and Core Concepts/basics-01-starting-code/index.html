@@ -9,16 +9,34 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script> 
     <script src="app.js" defer></script>
   </head>
   <body>
     <header>
       <h1>Vue Course Goals</h1>
+      <!-- Here it will not work because we are not mounting this element with Vue. -->
+      <p>{{courseGoal}}</p>
     </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
-      <p></p>
+      <!-- Below is an example of interpolation -->
+      <p>{{courseGoal}}</p>
+      <!-- Now see the interpolation will only work in the case of openeing and closing tags
+       so what if we want to pass data to attributes ? 
+       <a href="{{vueLink}}">Vue link</a>
+       the above will not work and for that Vue provides us with v-bind attribute or say 
+       data binding property.
+       -->
+       <p>Learn more about <a v-bind:href="vueLink">Vue</a>.</p>
+       <!-- So what we learn is that interpolation is for data and v-bind directive 
+        is for passing data to attributes. -->
+
+        <p>{{1+1}}</p>
+        <!-- We can call functions in the curly braces syntax and also we can do some simple JS things as well like ternary operation or match calculations : 
+        <p>{{Math.random()}}</p> -->
+
+        <p>{{ outputGoal() }}</p>
     </section>
   </body>
 </html>
