@@ -37,6 +37,11 @@
         <p>{{Math.random()}}</p> -->
 
         <p>{{ outputGoal() }}</p>
+
+        <!-- Now let's suppose you are getting the html value from the backend then how will you output that 
+         and for that reason we use v-html binding which looks like this : + -->
+
+         <p v-html="courseGoalC"></p>
     </section>
   </body>
 </html>
