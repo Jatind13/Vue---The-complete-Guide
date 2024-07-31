@@ -21,6 +21,8 @@
       <!-- So for adding event listeners we have the 'v-on' directive  -->
       <button v-on:click="counter++">Add</button>
       <button v-on:click="counter--">Remove</button>
+      <!-- We can lock the content or the intial values with v-once -->
+      <p v-once>Starting result : {{counter}}</p>
       <p>Result: {{ counter }}</p>
       <!-- Now let's inc or dec the counter using the methods 
        because that is more optimal way to do it. -->
