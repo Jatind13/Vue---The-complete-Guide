@@ -28,6 +28,27 @@
       <!--  We can call the method in both the ways by pointing or calling it Vue understands both. -->
       <button v-on:click="reduce">Remove</button>
       <p>Result through methods: {{ counter }}</p>
+      <!-- Now lets work with event arguments as well. -->
+      <button v-on:click="adding(5)">Add 5</button>
+      <button v-on:click="reducing(5)">Remove 5</button>
+      <p>Result: {{ eventCounter }}</p>
+      <!-- Using the native event object -->
+       <input type="text" v-on:input="setName">
+       <!-- And if you wanna pass some extra arguments to setName then to pass the 
+        even object you can use the $ like this "setName($event, lastName)" -->
+       <p>Your name : {{name}}</p>
+
+       <!-- Exploring the event Modifiers let suppose you want the form to be submitted then 
+        the default browser behaviour should not be triggered to handle that we can use the modifiers. -->
+
+        <form v-on:submit.prevent="submitted">
+          <!-- similarly like prevent we have stop and other modifiers and also 
+           have some modifiers for key events like v-on:keyup.enter so I am listening to 
+           enter key -->
+          <input type="text">
+          <!-- Whole page will reload  -->
+          <button>Sign up</button>
+        </form>
     </section>
   </body>
 </html>
