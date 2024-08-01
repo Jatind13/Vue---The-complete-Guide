@@ -3,7 +3,8 @@ const app = Vue.createApp({
     return {
       counter: 0,
       eventCounter:0,
-      name:''
+      name:'',
+      formInput:''
     };
   },
   methods:{
@@ -24,6 +25,9 @@ const app = Vue.createApp({
     },
     submitted(){
       alert("Form is submitted!")
+    },
+    resetInput(){
+      this.name =''
     }
   }
 });
