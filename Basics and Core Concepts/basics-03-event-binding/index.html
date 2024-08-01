@@ -60,9 +60,20 @@
         <button v-on:click="resetInput">Reset Input</button>
         <!--  Now since the above scenario is most used so 
           Vue came up with this solution and it is simple as well called 'v-model' -->
-        <input type="text" v-model="formInput" style="display: block;">
+        <input type="text" v-model="formInput" style="display: block" />
         <p>Your name : {{formInput}}</p>
       </section>
+<!-- 
+      <div>
+        <p>{{ fullName() }}</p>
+      </div> -->
+      <!-- Vue caches the result of a computed property. The computed function only re-runs 
+       when one of its dependencies changes. This means if firstName or lastName doesn’t
+        change, fullName won’t re-calculate on every render, improving performance. -->
+      <p>Implemented through computed </p>
+      <div>
+        <p>{{ fullName }}</p>
+      </div>
     </section>
   </body>
 </html>
