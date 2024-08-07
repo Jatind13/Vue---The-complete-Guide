@@ -7,6 +7,8 @@ const app = Vue.createApp({
       formInput: "",
       firstName: "John",
       lastName: "Doe",
+      counterWatch: 0,
+      message: ''
     };
   },
   // computed properties are essentially like methods but the major difference is that 
@@ -16,6 +18,24 @@ const app = Vue.createApp({
       console.log("it is not running again and again")
         return `${this.firstName} ${this.lastName}`;
     }
+  },
+  watch: {
+    /*
+    ->The watch option is an object where the keys are the names of 
+      data properties you want to watch.
+    ->The counter watcher monitors changes to the counter property.
+    ->It receives two arguments: newValue (the new value of counter)
+     and oldValue (the previous value of counter).
+    ->When counter reaches 5, the watcher updates the message property.*/ 
+    counterWatch(newValue, oldValue) {
+      if (newValue === 5) {
+        this.message = 'Counter reached 5!';
+      }
+    }
+    /* If you're simply transforming or deriving a value from other 
+    reactive data, a computed property is usually better because 
+    it's automatically cached and more declarative. */
+    // So for event driven changes prefer the event handlers.
   },
   methods: {
     add() {
@@ -48,6 +68,9 @@ const app = Vue.createApp({
 
       return `${this.firstName} ${this.lastName}`;
     },
+    incrementCounter() {
+      this.counterWatch++;
+    }
   },
 });
 

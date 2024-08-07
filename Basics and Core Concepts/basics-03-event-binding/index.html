@@ -74,6 +74,18 @@
       <div>
         <p>{{ fullName }}</p>
       </div>
+
+      <!-- A watcher in Vue.js is a function that gets triggered 
+       whenever the watched property changes. This can be useful 
+       for situations where you need to perform asynchronous 
+       operations, complex data transformations, or manually 
+       control how changes propagate through your application. -->
+
+       <div>
+        <p>Counter: {{ counterWatch}}</p>
+        <button v-on:click="incrementCounter">Increment</button>
+        <p>Message: {{ message }}</p>
+      </div>
     </section>
   </body>
 </html>
