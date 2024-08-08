@@ -75,3 +75,31 @@ const app = Vue.createApp({
 });
 
 app.mount("#events");
+
+
+// Summary of Methods, Computed, and Watchers in Vue.js
+
+// Methods:
+// - Functions that can be called within the template or other methods.
+// - When to Use:
+//   - Triggering user actions (e.g., button clicks).
+//   - Operations that need parameters.
+//   - Logic that does not need to be cached.
+// - Example Use Case: Form submission, dynamic calculations.
+
+
+// Computed Properties:
+// - Properties that return a value derived from reactive data.
+// - When to Use:
+//   - Data transformation that should be cached.
+//   - Complex bindings in templates.
+// - Example Use Case: Displaying a full name, derived state from other data.
+
+
+// Watchers:
+// - Functions that watch specific properties and run code when they change.
+// - When to Use:
+//   - Asynchronous operations (e.g., API calls).
+//   - Performing side effects on data change.
+//   - Precise control over reactions to data changes.
+// - Example Use Case: Reacting to search input, API calls on data change.
