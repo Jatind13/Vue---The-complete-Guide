@@ -1,16 +1,19 @@
-const app = Vue.createApp({
+Vue.createApp({
     data(){
         return {
-           userInput:'',
-           show:false
+            user_class: "",
+            status: "visible",
+            background_color: "",
         }
     },
     methods:{
-        handleToggle(){
-            console.log("lol test")
-            this.show = !this.show
+        toggle(){
+            if (this.status === "visible"){
+                this.status = "hidden";
+            }
+            else{
+                this.status = "visible";
+            }
         }
     }
-});
-
-app.mount("#assignment")
+}).mount("#assignment")
